@@ -26,7 +26,7 @@ cd ~/smp_monitor
 ## Roadmap
 
 - [x] Step 1: Query online/offline count
-- [ ] Step 2: Add timestamp + log file
+- [x] Step 2: Add timestamp + log file
 - [ ] Step 3: Save history to CSV
 - [ ] Step 4: Compute baseline from history
 - [ ] Step 5: Classify normal / abnormal
