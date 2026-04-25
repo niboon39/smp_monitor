@@ -8,7 +8,18 @@ PGDATABASE="zxsmp"
 SCHEMA="tenant_14a6a16c2c9a40b8b265f332db3d342b"
 TABLE="smp_t_stb_onlinestatus"
 
+# Log file 
+LOG_DIR="/home/postgres/smp_monitor" 
+LOG_FILE="$LOGDIR/monitor.log"
+
 ##########################
+
+mkdir -p "$LOG_DIR"
+log() {
+    local ts 
+    ts=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "$ts | $*" | tee -a "$LOG_FILE" 
+}
 
 # Test Login 
 # RESULT=$(psql -d "$PGDATABASE" -c "\dt")
@@ -41,6 +52,8 @@ else
     RATE="0.0"
 fi 
 
-echo "Active fleet : $ACTIVE"
-echo "  Online     : $ONLINE  (${RATE}%)"
-echo "  Offline    : $OFFLINE"
+# echo "Active fleet : $ACTIVE"
+# echo "  Online     : $ONLINE  (${RATE}%)"
+# echo "  Offline    : $OFFLINE"
+
+log "active=$ACTIVE online=$ONLINE offline=$OFFLINE rate=${RATE}%"
