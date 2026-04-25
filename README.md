@@ -7,7 +7,7 @@ ZTE SMP platform, store history, and detect abnormal trends.
 
 - Runs on SMP DB1 (PG / PostgreSQL)
 - Authenticated via peer auth (must run as `postgres` user)
-- Tested on PostgreSQL 9.4.x
+- Tested on PostgreSQL 9.4.1
 
 ## Scripts
 
@@ -17,13 +17,12 @@ ZTE SMP platform, store history, and detect abnormal trends.
 
 ## Usage
 
-\`\`\`bash
+```bash
 # As root
 su - postgres
 cd ~/smp_monitor
-./q_Online_Offline.sh
-\`\`\`
-
+./script/query_status.sh
+```
 ## Roadmap
 
 - [x] Step 1: Query online/offline count
