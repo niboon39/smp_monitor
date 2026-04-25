@@ -1,0 +1,20 @@
+# Force shell scripts to LF regardless of OS
+*.sh    text eol=lf
+
+# Force config-like text to LF
+*.conf  text eol=lf
+*.cfg   text eol=lf
+*.env   text eol=lf
+
+# Default
+* text=auto
+
+# Binary - never touch
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.pdf   binary
+*.xlsx  binary
+*.docx  binary
+*.zip   binary
