@@ -27,7 +27,7 @@ cd ~/smp_monitor
 
 - [x] Step 1: Query online/offline count
 - [x] Step 2: Add timestamp + log file
-- [ ] Step 3: Save history to CSV
+- [x] Step 3: Save history to CSV
 - [ ] Step 4: Compute baseline from history
 - [ ] Step 5: Classify normal / abnormal
 - [ ] Step 6: Email alert on abnormal trend
