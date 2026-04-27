@@ -4,6 +4,10 @@ set -euo pipefail
  
 ######## Config #########
 
+# psql path
+export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/lib:${LD_LIBRARY_PATH:-}"
+
 PGDATABASE="zxsmp"
 SCHEMA="tenant_14a6a16c2c9a40b8b265f332db3d342b"
 TABLE="smp_t_stb_onlinestatus"
